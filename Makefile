@@ -30,7 +30,7 @@ distclean: clean
 	rm -rf $(HGFE_D)
 	git clean -dxf
 
-$(GITHG_F): $(HGFE_D)
+$(GITHG_F): $(GITHG_S) $(HGFE_D)
 	rm -rf $(HGFE_D)
 	git submodule update --init
 	mkdir -p $(BUILDDIR)
